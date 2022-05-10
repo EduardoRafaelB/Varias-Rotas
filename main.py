@@ -7,7 +7,7 @@ def index():
   return render_template('index.html')
 
 @app.route('/unifran')
-def uni():
+def unifran():
   return render_template('unifran.html')
 
 if __name__ == '__main__':
