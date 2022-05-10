@@ -1,18 +1,14 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask('__main__')
 
 @app.route('/')
 def index():
-  return '<h1>Olá Mundo!</h1>'
+  return render_template('index.html')
 
 @app.route('/unifran')
 def uni():
-  return '<h2>Universidade de Franca</h2>'
-
-@app.route('/dashboard/<nome>')
-def user(nome):
-  return f'Olá, {nome}'
+  return render_template('unifran.html')
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0')
